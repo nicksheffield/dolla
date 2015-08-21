@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.yo{ color: blue; }
+		section{ color: red; }
+	</style>
+</head>
+<body>
+	<div class="box">1</div>
+	<div class="box">2</div>
+	<div class="box">
+		<span>3</span>
+	</div>
+	<div class="box">4</div>
+	<div class="box">5</div>
+	<section class="box">6</section>
+	<section>7</section>
+	<section class="box">8</section>
+	<section><a href="http://google.com/">Google</a></section>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="dolla-0.2.js"></script>
+	<script>
+
+		/*dolla('.box').addClass('foo bar')
+		//dolla('.bar').removeClass('bar')
+
+		console.log(dolla('.box'))
+		console.log($('.box'))
+
+		console.log(dolla('div').hasClass('box'))
+		console.log($('div').hasClass('box'))
+
+		console.log(dolla('div').next())
+		console.log($('div').next())
+
+		console.log($('span').closest('.box'))
+
+		dolla('.box').on('click', function(e,i){
+			console.log(i)
+			console.log(this)
+			console.log(e)
+		})
+
+		dolla('.box').on('click', function(){
+			dolla(this).addClass('yo')
+		})
+
+		var b = document.createElement('b');
+		b.innerHTML = 'hello';
+
+		dolla('div').append(b);*/
+
+		dolla(document).on('mouseover', 'span', function(e){
+			console.log('moused over span', e);
+		})
+
+		dolla('a').on('click', function(e){
+			return false;
+		})
+
+		dolla(window)
+			.on('resize', function(){
+				console.log('resize');
+			})
+			.on('scroll', function(){
+				console.log('scroll');
+			})
+
+	</script>
+</body>
+</html>
